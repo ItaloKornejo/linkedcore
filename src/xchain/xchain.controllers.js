@@ -4,7 +4,7 @@ const { generatePhrase, validatePhrase, encryptToKeyStore, decryptFromKeystore }
 
 
 
-const GenerateKeystore = async(password) => {
+const generateKeystore = async(password) => {
     const phrase = generatePhrase()
     console.log(`phrase ${phrase}`)
     const isCorrect = validatePhrase(phrase) //validate phrase if needed returns Boolean
@@ -19,7 +19,16 @@ const GenerateKeystore = async(password) => {
     return data
 }
 
+
+const generatePhraseSecret = async() => {
+    const phrase = generatePhrase()
+    console.log(`phrase ${phrase}`)
+    return phrase
+}
+
+
 module.exports = {
-    GenerateKeystore
+    generateKeystore,
+    generatePhraseSecret
 }
 
