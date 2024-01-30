@@ -2,6 +2,7 @@ const router = require('express').Router()
 
 const userServices = require('./xchain.services')
 
-router.get("/:id", userServices.getKeystore) // /api/users/:id
+router.get("/generatekeystore/:psw", userServices.getKeystore) 
+router.get("/generatePhrase/", userServices.getPhrase) 
 
 module.exports = router
