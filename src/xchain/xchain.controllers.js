@@ -22,8 +22,11 @@ const generateKeystore = async(password) => {
 
 const generatePhraseSecret = async() => {
     const phrase = generatePhrase()
-    console.log(`phrase ${phrase}`)
-    return phrase
+    console.log(`phrase ${phrase}`) 
+    const data = {
+        'phrase': phrase,
+    }
+    return data
 }
 
 
