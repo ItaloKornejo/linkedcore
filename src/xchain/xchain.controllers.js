@@ -4,7 +4,7 @@ const { generatePhrase, validatePhrase, encryptToKeyStore, decryptFromKeystore }
 
 const generateKeystore = async(obj) => {
     const keystore = await encryptToKeyStore(obj.phrase, obj.password)
-    const isCorrect = validatePhrase(phrase) //validate phrase if needed returns Boolean
+    const isCorrect = validatePhrase(obj.phrase) //validate phrase if needed returns Boolean
     const data = {
         phrase: obj.phrase,
         keystore: keystore,
